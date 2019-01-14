@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitSimulation", "DigitSim
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitElements", "DigitElements\DigitElements.csproj", "{9A7E24F5-862C-4BF6-BA5C-F33E759FE112}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitVisualElements", "DigitVisualElements\DigitVisualElements.csproj", "{09ECE2D7-BC61-45D3-B2F1-40F21130E7B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9A7E24F5-862C-4BF6-BA5C-F33E759FE112}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A7E24F5-862C-4BF6-BA5C-F33E759FE112}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A7E24F5-862C-4BF6-BA5C-F33E759FE112}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09ECE2D7-BC61-45D3-B2F1-40F21130E7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09ECE2D7-BC61-45D3-B2F1-40F21130E7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09ECE2D7-BC61-45D3-B2F1-40F21130E7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09ECE2D7-BC61-45D3-B2F1-40F21130E7B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

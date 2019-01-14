@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,19 +9,18 @@ namespace DigitSimulation
 {
     public class DigitSimProcessor
     {
-        private readonly DigitSim doc;
+        private readonly Stopwatch stopwatch = new Stopwatch();
+        public TimeSpan LastStepDuration { get; private set; }
 
-        public DigitSimProcessor(DigitSim doc)
+        public TimeSpan Step(DigitSim doc)
         {
-            this.doc = doc;
-        }
-
-        public void Step(DigitSim doc)
-        {
+            stopwatch.Restart();
             //process connections
             Parallel.ForEach(doc.connections, ProcessConnection);
             //process elements
             Parallel.ForEach(doc.elements, ProcessElement);
+            stopwatch.Stop();
+            return LastStepDuration = stopwatch.Elapsed;
         }
 
         void ProcessConnection(SimConnection c)
