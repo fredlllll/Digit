@@ -28,29 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.visualElement1 = new Digit.VisualElement();
+            this.grid1 = new Digit.Grid();
             this.SuspendLayout();
             // 
-            // visualElement1
+            // grid1
             // 
-            this.visualElement1.Location = new System.Drawing.Point(68, 37);
-            this.visualElement1.Name = "visualElement1";
-            this.visualElement1.Size = new System.Drawing.Size(150, 150);
-            this.visualElement1.TabIndex = 0;
+            this.grid1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid1.GridOffsetX = 0F;
+            this.grid1.GridOffsetY = 0F;
+            this.grid1.GridSpacing = 100F;
+            this.grid1.Location = new System.Drawing.Point(0, 0);
+            this.grid1.Name = "grid1";
+            this.grid1.Size = new System.Drawing.Size(355, 305);
+            this.grid1.TabIndex = 0;
             // 
-            // VisualElementRender
+            // VisualElementRenderer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.visualElement1);
-            this.Name = "VisualElementRender";
-            this.Size = new System.Drawing.Size(295, 284);
+            this.Controls.Add(this.grid1);
+            this.Name = "VisualElementRenderer";
+            this.Size = new System.Drawing.Size(355, 305);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private VisualElement visualElement1;
+        private Grid grid1;
     }
 }

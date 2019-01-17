@@ -37,8 +37,14 @@ namespace Digit
         {
             Left = (int)((X + Renderer.RenderOffsetX) * Renderer.RenderScale);
             Top = (int)((Y + Renderer.RenderOffsetY) * Renderer.RenderScale);
-            Width = (int)(ElementWidth * Renderer.RenderScale);
-            Height = (int)(ElementHeight * Renderer.RenderScale);
+            int width = (int)(ElementWidth * Renderer.RenderScale);
+            int height = (int)(ElementHeight * Renderer.RenderScale);
+            if(Width != width || Height != height) //only invalidate control when size is changed
+            {
+                Width = width;
+                Height = height;
+                Refresh();
+            }
         }
 
         static Random r = new Random();
@@ -46,6 +52,10 @@ namespace Digit
         public VisualElement()
         {
             InitializeComponent();
+            X = Top;
+            Y = Left;
+            ElementWidth = Width;
+            ElementHeight = Height;
         }
 
         protected void DrawBox(Graphics g)

@@ -35,9 +35,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.rendererInfo1 = new Digit.RendererInfo();
             this.visualElementRender1 = new Digit.VisualElementRenderer();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -84,6 +86,10 @@
             this.splitContainer1.Location = new System.Drawing.Point(0, 49);
             this.splitContainer1.Name = "splitContainer1";
             // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.rendererInfo1);
+            // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
@@ -105,11 +111,23 @@
             this.splitContainer2.SplitterDistance = 758;
             this.splitContainer2.TabIndex = 0;
             // 
+            // rendererInfo1
+            // 
+            this.rendererInfo1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rendererInfo1.BackColor = System.Drawing.Color.Transparent;
+            this.rendererInfo1.Location = new System.Drawing.Point(3, 3);
+            this.rendererInfo1.Name = "rendererInfo1";
+            this.rendererInfo1.Size = new System.Drawing.Size(215, 150);
+            this.rendererInfo1.TabIndex = 0;
+            // 
             // visualElementRender1
             // 
             this.visualElementRender1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.visualElementRender1.Location = new System.Drawing.Point(0, 0);
             this.visualElementRender1.Name = "visualElementRender1";
+            this.visualElementRender1.RenderOffsetX = 0F;
+            this.visualElementRender1.RenderOffsetY = 0F;
             this.visualElementRender1.RenderScale = 0.5F;
             this.visualElementRender1.Size = new System.Drawing.Size(756, 589);
             this.visualElementRender1.TabIndex = 0;
@@ -129,6 +147,7 @@
             this.Text = "Digit";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
@@ -149,6 +168,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
         private VisualElementRenderer visualElementRender1;
+        private RendererInfo rendererInfo1;
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace Digit
 {
-    partial class VisualElement
+    partial class RendererInfo
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,18 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.updateTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // VisualElement
+            // updateTimer
+            // 
+            this.updateTimer.Enabled = true;
+            this.updateTimer.Tick += new System.EventHandler(this.UpdateTimer_Tick);
+            // 
+            // RendererInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Name = "VisualElement";
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Name = "RendererInfo";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer updateTimer;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Digit
 {
-    partial class VisualElement
+    partial class Grid
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,12 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // VisualElement
+            // Grid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Name = "VisualElement";
+            this.DoubleBuffered = true;
+            this.Name = "Grid";
+            this.Size = new System.Drawing.Size(336, 276);
             this.ResumeLayout(false);
 
         }

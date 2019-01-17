@@ -15,6 +15,8 @@ namespace Digit
         public MainForm()
         {
             InitializeComponent();
+
+            rendererInfo1.renderer = visualElementRender1;
         }
     }
 }
